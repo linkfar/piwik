@@ -39,7 +39,7 @@
             if (!reportsPromise) {
                 reportsPromise = piwikApi.fetch({
                     method: 'API.getReportMetadata',
-                    idSites: piwik.idSite || piwik.broadcast.getValueFromUrl('idSite'),
+                    idSite: piwik.idSite || piwik.broadcast.getValueFromUrl('idSite'),
                 }).then(function (response) {
                     model.reports = response;
                     return response;
